@@ -1,0 +1,21 @@
+<mat-toolbar #toolbar class="mat-elevation-z3" [ngClass]="{'scrolled-toolbar': false}">
+    <div class="content2">
+    <button (click)="toggleDrawer()" class="menuIcon" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a routerLink="/automoveis" class="logoHome">
+        <span>
+            <img src="../../assets/carroBranco.png" *ngIf="showIcon" alt="" width="48px" height="48px">
+            <p *ngIf="showIcon">Auto Aramuni</p>
+            <img src="../../assets/carroBranco.png" alt="" width="48px" height="48px">
+        </span>
+    </a>
+</div>
+    <button class="iconeLogOut" mat-icon-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
+
+<div class="content">
+    <app-menu-lateral class="app-menu-lateral"></app-menu-lateral>
+</div>

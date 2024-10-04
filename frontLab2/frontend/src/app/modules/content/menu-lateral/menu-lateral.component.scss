@@ -1,0 +1,112 @@
+mat-nav-list {
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    // height: 100%;
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.drawerLateral {
+    position: fixed;
+    top: 56px;
+}
+
+mat-checkbox {
+    color: black;
+}
+
+mat-list-item {
+
+
+
+    .containerItems {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        // justify-content: center;
+        // padding: 1rem;
+        padding: 0px;
+
+        .iconItem {
+            color: white;
+        }
+
+        .containerIcon {
+            display: flex;
+            // width: 100%;
+            justify-content: flex-start;
+            padding: 1rem;
+        }
+
+        .iconItem.active {
+            color: orange;
+            width: 100%;
+        }
+
+        .containerButton {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+
+            .buttonItem {
+                color: white;
+                width: 100%;
+
+            }
+
+            .buttonItem:hover {
+                color: orange;
+                width: 100%;
+                transition: background-color 0.5s;
+            }
+
+            .buttonItem.active {
+                color: orange;
+            }
+
+            .buttonItem.active:hover {
+                color: orange;
+                transition: background-color 0.5s;
+            }
+
+
+        }
+
+    }
+
+    // .containerButton:hover {
+    //     border-color: none;
+    //     color: black;
+    //     border-radius: 4px;
+    //     background-color: black;
+    // }
+
+
+
+    button {
+        color: white;
+    }
+
+    // button:hover {
+    //     border-color: none;
+    //     background-color: black;
+    //     color: black;
+    //     transition: background-color 0.5s;
+    // }
+}
+
+
+mat-drawer {
+    background-color: black;
+    border: none;
+}
+
+mat-drawer-content {
+    border: none;
+    background-color: white;
+    flex: 1;
+}

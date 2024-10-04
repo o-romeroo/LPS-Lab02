@@ -1,0 +1,89 @@
+<mat-card>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label>Buscar Automoveis</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Pesquisar" #input>
+        </mat-form-field>
+
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef class="thCell">ID</th>
+                <td mat-cell *matCellDef="let automovel">
+                    <p class="pValueTable"> {{automovel.id}}</p>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="marca">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Marca</th>
+                <td mat-cell *matCellDef="let automovel">
+                    <p class="pValueTable"> {{automovel.marca}}</p>
+                </td>
+
+
+            </ng-container>
+
+
+            <ng-container matColumnDef="modelo">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Modelo</th>
+                <td mat-cell *matCellDef="let automovel">
+                    <p class="pValueTable"> {{automovel.modelo}}</p>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ano">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Ano</th>
+                <td mat-cell *matCellDef="let automovel">
+                    <p class="pValueTable"> {{automovel.ano}}</p>
+                </td>
+
+            </ng-container>
+
+            <ng-container matColumnDef="placa">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Placa</th>
+                <td mat-cell *matCellDef="let automovel">
+                    <p class="pValueTable"> {{automovel.placa}}</p>
+                </td>
+
+            </ng-container>
+
+
+            <ng-container matColumnDef="valor">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Valor</th>
+                <td mat-cell *matCellDef="let automovel">
+                    <p class="pValueTable"> {{automovel.precoDiaria}}</p>
+                </td>
+
+            </ng-container>
+
+
+            <ng-container matColumnDef="detalhes">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Ações</th>
+                <td mat-cell class="actionsButtons" *matCellDef="let automovel">
+                    <div class="pValueTable">
+                        <button class="detalhesAutomovel" (click)="openEditDialog(automovel)">
+                            <!-- (click)="openDialogDetalhesAutomovel(automovel)" -->
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button class="detalhesAutomovel" (click)="openDeleteDialog(automovel.id)" >
+                            <!-- (click)="openDialogEditarCliente(automovel)" -->
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </td>
+
+            </ng-container>
+
+
+            <!-- Definição de linhas e colunas -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns">
+            </tr>
+            <tr mat-row *matRowDef="let row; columns:displayedColumns">
+            </tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Selecione a página"></mat-paginator>
+    </mat-card-content>
+</mat-card>

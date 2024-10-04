@@ -1,0 +1,52 @@
+$hover-background-color: black;
+$toolbar-background-color: black;
+$toolbar-color: white;
+$button-background-color: black;
+$button-hover-background-color: orange;
+$button-color: white;
+$button-hover-color: black;
+
+mat-toolbar {
+    background-color: $toolbar-background-color;
+    color: $toolbar-color;
+}
+
+mat-list-item:hover {
+    background-color: $button-hover-background-color;
+
+    mat-icon{
+        color:black;
+    }
+
+    a {
+        color: $button-hover-color;
+    }
+
+
+
+    opacity: 1;
+    transition: background-color 0.2s;
+}
+
+mat-card {
+    border: none;
+    background-color: transparent;
+}
+
+.btnNovaAcao {
+    color: $button-color;
+    opacity: 0.91;
+    background-color: $button-background-color;
+    margin: 1rem;
+}
+
+.btnNovaAcao:hover {
+    background-color: $button-hover-background-color;
+    color: $button-hover-color;
+    opacity: 1;
+    transition: background-color 0.5s;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

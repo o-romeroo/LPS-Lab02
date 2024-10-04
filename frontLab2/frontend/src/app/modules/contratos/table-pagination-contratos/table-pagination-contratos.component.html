@@ -1,0 +1,97 @@
+<mat-card>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label>Buscar Automoveis</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Pesquisar" #input>
+        </mat-form-field>
+
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef class="thCell">ID</th>
+                <td mat-cell *matCellDef="let contrato">
+                    <p class="pValueTable"> {{contrato.id}}</p>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nomeCliente">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Nome Cliente</th>
+                <td mat-cell *matCellDef="let contrato">
+                    <p class="pValueTable"> {{contrato.nomeCliente}}</p>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="cpf">
+                <th mat-header-cell *matHeaderCellDef class="thCell">CPF Cliente</th>
+                <td mat-cell *matCellDef="let contrato">
+                    <p class="pValueTable"> {{contrato.cpfCliente}}</p>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="placa">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Placa Automóvel</th>
+                <td mat-cell *matCellDef="let contrato">
+                    <p class="pValueTable"> {{contrato.placaAutomovel}}</p>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="modelo">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Modelo</th>
+                <td mat-cell *matCellDef="let contrato">
+                    <p class="pValueTable"> {{contrato.modeloAutomovel}}</p>
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="diarias">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Diárias</th>
+                <td mat-cell *matCellDef="let contrato">
+                    <p class="pValueTable"> {{contrato.quantidadeDias}}</p>
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="valor">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Valor Contrato</th>
+                <td mat-cell *matCellDef="let contrato">
+                    <p class="pValueTable"> {{contrato.valor}}</p>
+                </td>
+            </ng-container>
+
+
+
+            <ng-container matColumnDef="detalhes">
+                <th mat-header-cell *matHeaderCellDef class="thCell">Ações</th>
+                <td mat-cell class="actionsButtons" *matCellDef="let contrato">
+                    <div *ngIf="contrato.statusContrato == 'PENDENTE'">
+                        <div class="pValueTable">
+
+                            <button class="detalhesAutomovel">
+                                <mat-icon (click)="openDetalhesDialog(contrato)">more</mat-icon>
+                            </button>
+
+                            <button class="detalhesAutomovel">
+                                <mat-icon (click)="approveContrato(contrato.id)">done</mat-icon>
+                            </button>
+
+                            <button class="detalhesAutomovel">
+                                <mat-icon (click)="rejectContrato(contrato.id)">close</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+
+            </ng-container>
+
+
+            <!-- Definição de linhas e colunas -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns">
+            </tr>
+            <tr mat-row *matRowDef="let row; columns:displayedColumns">
+            </tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Selecione a página"></mat-paginator>
+    </mat-card-content>
+</mat-card>

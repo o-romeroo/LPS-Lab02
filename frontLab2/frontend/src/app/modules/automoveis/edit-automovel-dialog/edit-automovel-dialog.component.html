@@ -1,0 +1,38 @@
+<mat-toolbar  class="toolbarCadastrarVeiculo">Editar Veiculo</mat-toolbar>
+<div mat-dialog-content fxLayout="column" fxLayoutGap="10px">
+  <form [formGroup]="form" (ngSubmit)="onUpdate()" fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between stretch">
+      <mat-form-field appearance="fill" fxFlex="48%">
+        <mat-label>Placa</mat-label>
+        <input matInput formControlName="placa" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill" fxFlex="48%">
+        <mat-label>Ano</mat-label>
+        <input matInput type="number" formControlName="ano" required>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between stretch">
+      <mat-form-field appearance="fill" fxFlex="48%">
+        <mat-label>Modelo</mat-label>
+        <input matInput formControlName="modelo" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill" fxFlex="48%">
+        <mat-label>Marca</mat-label>
+        <mat-select formControlName="marca" required>
+          <mat-option *ngFor="let marca of marcas" [value]="marca">{{ marca }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    
+    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between stretch">
+      <mat-form-field appearance="fill" fxFlex="48%">
+        <mat-label>Preço Diária</mat-label>
+        <input matInput type="number" formControlName="precoDiaria" required>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions class="actionsContent">
+  <button mat-button class="btnCancel" (click)="onClose()">Cancelar</button>
+  <button mat-raised-button class="btnSave" [disabled]="form.invalid" (click)="onUpdate()">Atualizar</button>
+</div>

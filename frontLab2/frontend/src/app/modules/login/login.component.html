@@ -1,0 +1,17 @@
+<div class="login-wrapper">
+    <div class="login-image"></div> <!-- Removido o <img> para usar background em CSS -->
+    <div class="login-form">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <h1>Bem-vindo</h1>
+            <mat-form-field appearance="fill">
+                <mat-label>Login</mat-label>
+                <input matInput formControlName="username" placeholder="Usuário">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" formControlName="password" placeholder="Senha">
+            </mat-form-field>
+            <button mat-raised-button class="btnSave" type="submit" [disabled]="!loginForm.valid">Entrar</button>
+        </form>
+    </div>
+</div>

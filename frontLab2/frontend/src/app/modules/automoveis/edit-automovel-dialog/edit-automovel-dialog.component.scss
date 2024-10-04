@@ -1,0 +1,59 @@
+/* vehicle-dialog.component.css */
+mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field {
+    width: 100%;
+    /* Garante que o mat-form-field use toda a largura do flex container */
+}
+
+h1.mat-dialog-title {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+button {
+    margin-left: 8px;
+}
+
+button.btnSave {
+    background-color: grey;
+    color: white;
+
+    &:not(:disabled) {
+        background-color: black;
+    }
+}
+
+.btnCancel {
+    background-color: red;
+    color: white;
+}
+
+
+.toolbarCadastrarVeiculo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 64px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.actionsContent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+}

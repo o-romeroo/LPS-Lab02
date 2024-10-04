@@ -1,0 +1,24 @@
+
+<mat-toolbar style="background-color: black; color:white">Detalhes do Contrato</mat-toolbar>
+
+<mat-dialog-content>
+    <div>
+        <p><strong>ID:</strong> {{ contrato.id }}</p>
+        <p><strong>Quantidade de Dias:</strong> {{ contrato.quantidadeDias }}</p>
+        <p><strong>Valor:</strong> {{ contrato.valor | currency }}</p>
+        <p><strong>Tipo de Registro:</strong> {{ contrato.tipoRegistro }}</p>
+        <p><strong>Aprovação da Empresa:</strong> {{ contrato.aprovacaoEmpresa ? 'Sim' : 'Não' }}</p>
+        <p><strong>Status do Contrato:</strong> {{ contrato.statusContrato }}</p>
+        <p><strong>Data de Início:</strong> {{ contrato.dataInicio ? (contrato.dataInicio | date) : 'N/A' }}</p>
+        <p><strong>Data de Término:</strong> {{ contrato.dataTermino ? (contrato.dataTermino | date) : 'N/A' }}</p>
+        <p><strong>Juros:</strong> {{ contrato.juros ? contrato.juros : 'N/A' }}</p>
+        <p><strong>Tipo de Contrato:</strong> {{ contrato.tipoContrato }}</p>
+        <p><strong>Nome do Cliente:</strong> {{ contrato.nomeCliente }}</p>
+        <p><strong>CPF do Cliente:</strong> {{ contrato.cpfCliente }}</p>
+        <p><strong>Placa do Automóvel:</strong> {{ contrato.placaAutomovel }}</p>
+        <p><strong>Modelo do Automóvel:</strong> {{ contrato.modeloAutomovel }}</p>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Fechar</button>
+</mat-dialog-actions>

@@ -1,0 +1,98 @@
+span {
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    p {
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+.iconeLogOut{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.iconeLogOut:hover{
+    color: orange;
+}
+
+
+.menuIcon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.menuIcon:hover {
+    color: orange;
+}
+
+
+
+.notifications {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
+    mat-icon {
+        cursor: pointer;
+    }
+}
+
+.empty-menu {
+    padding: 8px;
+}
+
+.menu-item {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.logoHome {
+    text-decoration: none;
+    color: inherit;
+}
+
+mat-toolbar {
+    color: white;
+    background-color: black;
+    justify-content: space-between;
+    // position: inherit;
+}
+
+.content2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+
+.toolbarMenu {
+    padding: 2rem 4rem;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.content {
+    overflow-y: auto;
+    /* Torna a div scrollable na vertical quando o conteúdo ultrapassa a altura */
+    height: calc(100vh - 64px);
+
+}
+
+/* Estilo adicional para evitar que o conteúdo seja cortado por trás do mat-toolbar */
+.mat-elevation-z3 {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,47 @@
+
+
+
+<div [@fadeIn] *ngIf="userType == 'EMPRESA'">
+<app-toolbar  [toolbarTitle]="toolbarTitle"></app-toolbar>
+<mat-tab-group color="warn">
+    <mat-tab label="Pendentes">
+        <ng-template matTabContent>
+            <app-table-pagination-contratos [dataSource]="dataSourcePendentes"></app-table-pagination-contratos>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Aceitos">
+        <ng-template matTabContent>
+            <app-table-pagination-contratos [dataSource]="dataSourceAtivos"></app-table-pagination-contratos>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Recusados">
+        <ng-template matTabContent>
+            <app-table-pagination-contratos [dataSource]="dataSourceCancelados"></app-table-pagination-contratos>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>
+
+</div>
+
+
+<div [@fadeIn] *ngIf="userType == 'CLIENTE'">
+    <app-toolbar  [toolbarTitle]="toolbarTitle"></app-toolbar>
+    <mat-tab-group color="warn">
+        <mat-tab label="Pendentes">
+            <ng-template matTabContent>
+                <app-table-pagination-contratos [dataSource]="dataSourcePendentes"></app-table-pagination-contratos>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Aceitos">
+            <ng-template matTabContent>
+                <app-table-pagination-contratos [dataSource]="dataSourceAtivos"></app-table-pagination-contratos>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Recusados">
+            <ng-template matTabContent>
+                <app-table-pagination-contratos [dataSource]="dataSourceCancelados"></app-table-pagination-contratos>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+    
+    </div>

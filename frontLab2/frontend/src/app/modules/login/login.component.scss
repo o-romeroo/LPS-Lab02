@@ -1,0 +1,47 @@
+.login-wrapper {
+    display: flex;
+    height: 100vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport */
+  }
+  
+  .login-image {
+    flex: 1; /* Ocupa metade do espaço */
+    background: url('../../../assets/aramuni_playba.jpg') no-repeat center center; /* Ajuste a URL conforme necessário */
+    background-size: cover; /* Garante que a imagem cubra o espaço sem deformar */
+  }
+  
+  .login-form {
+    flex: 1; /* Ocupa a outra metade do espaço */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Cor de fundo para a seção do formulário */
+    padding: 30px;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    max-width: 300px; /* Controla a largura máxima dos campos de formulário */
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px; /* Controla a largura máxima do botão */
+  }
+
+  .btnSave{
+    background-color: grey;
+    color: white;
+    &:not(:disabled) {
+        color:white;
+        background-color: green;
+    }
+  }
+  
