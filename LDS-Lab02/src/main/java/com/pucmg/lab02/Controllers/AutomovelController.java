@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pucmg.lab02.Models.Automovel;
+import com.pucmg.lab02.Models.Empresa;
 import com.pucmg.lab02.Models.Usuario;
 import com.pucmg.lab02.Services.AutomovelService;
+import com.pucmg.lab02.Services.EmpresaService;
 import com.pucmg.lab02.Services.UsuarioService;
 import com.pucmg.lab02.dto.CreateAutomovelDTO;
 
@@ -31,6 +33,7 @@ public class AutomovelController {
 
     @Autowired
     private UsuarioService usuarioService; // Serviço para gerenciar usuários
+ // Serviço para gerenciar empresas
 
     // Endpoint para Empresa adicionar um novo veículo
     @PostMapping("/add")
@@ -108,8 +111,8 @@ public class AutomovelController {
 }
 
 
-@PutMapping("/update")
-public ResponseEntity<?> updateAutomovel(@RequestBody Automovel automovel, @RequestParam Long empresaId) {
+    @PutMapping("/update")
+    public ResponseEntity<?> updateAutomovel(@RequestBody Automovel automovel, @RequestParam Long empresaId) {
     // Valida se a empresa é válida
     usuarioService.validaUsuarioEmpresa(empresaId);
 

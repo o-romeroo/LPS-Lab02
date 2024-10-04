@@ -1,5 +1,7 @@
 package com.pucmg.lab02.Services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,10 @@ public class BancoService {
 
     public Banco save(Banco banco) {
         return bancoRepository.save(banco);
+    }
+
+    public List<Banco> findAll() {
+        return bancoRepository.findAll();
     }
 
     
