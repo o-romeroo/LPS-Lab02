@@ -3,16 +3,16 @@
 O Sistema de Aluguel de Carros é uma plataforma online desenvolvida para facilitar e gerenciar o processo de aluguel de automóveis, atendendo tanto clientes individuais quanto agentes, como empresas e bancos. O sistema é acessível após o cadastro, permitindo que os usuários realizem diversas operações relacionadas ao aluguel de veículos.
 
 ### Diagrama de Caso de Uso
-![User Case](.LDS-Lab02/images/UserCaseDiagram-lab02.png)
+![User Case](./LDS-Lab02/images/UserCaseDiagram-lab02.png)
 
 ### Diagrama de Classes
-![Class Diagram](.LDS-Lab02/images/diagrama_classe_lab02.PNG)
+![Class Diagram](./LDS-Lab02/images/diagrama_classe_lab02.PNG)
 
 ### Diagrama de Pacotes
-![Package Diagram](.LDS-Lab02/images/diagrama_pacotes_lab02.png)
+![Package Diagram](./LDS-Lab02/images/diagrama_pacotes_lab02.png)
 
 ### Diagrama de Implantação
-![Implantation Diagram](.LDS-Lab02/images/diagrama_implantacao_lab02.png)
+![Implantation Diagram](./LDS-Lab02/images/diagrama_implantacao_lab02.png)
 
 ### Histórias de Usuário
 
