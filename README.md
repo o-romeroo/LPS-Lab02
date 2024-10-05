@@ -11,6 +11,9 @@ O Sistema de Aluguel de Carros é uma plataforma online desenvolvida para facili
 ### Diagrama de Pacotes
 ![Package Diagram](./LDS-Lab02/images/diagrama_pacotes_lab02.png)
 
+### Diagrama de Componentes
+![Components Diagram](./LDS-Lab02/images/diagrama_componentes_lab02.png)
+
 ### Diagrama de Implantação
 ![Implantation Diagram](./LDS-Lab02/images/diagrama_implantacao_lab02.png)
 
