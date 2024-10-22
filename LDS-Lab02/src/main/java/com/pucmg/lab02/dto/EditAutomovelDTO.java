@@ -1,7 +1,7 @@
 package com.pucmg.lab02.dto;
 
 import com.pucmg.lab02.Models.Automovel;
-
+//TODO:
 public class EditAutomovelDTO {
     Automovel automovel;
    

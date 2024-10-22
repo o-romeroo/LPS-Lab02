@@ -3,7 +3,7 @@ package com.pucmg.lab02.dto;
 import java.time.LocalDateTime;
 
 import com.pucmg.lab02.Models.Contrato;
-
+//TODO:
 public class ContratoResponseDTO {
     private Long id;
     private int quantidadeDias;
