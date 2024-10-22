@@ -1,6 +1,5 @@
 package com.pucmg.lab02.Models;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -21,9 +20,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table (name = "entidade_empregadora")
+@Table(name = "entidade_empregadora")
 public class EntidadeEmpregadora {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
