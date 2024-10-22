@@ -1,5 +1,5 @@
 package com.pucmg.lab02.dto;
-
+//TODO:
 public class UsuarioResponseDTO {
     private Long idlogin;
     private String userType; // Novo campo para armazenar o tipo de usuário

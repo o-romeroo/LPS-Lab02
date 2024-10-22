@@ -3,7 +3,7 @@ package com.pucmg.lab02.dto;
 import com.pucmg.lab02.Models.EntidadeEmpregadora;
 import com.pucmg.lab02.Models.Usuario;
 import java.util.List;
-
+//TODO:
 public class CreateClienteDTO {
     private Usuario usuario;
     private String cpf;

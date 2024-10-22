@@ -1,5 +1,5 @@
 package com.pucmg.lab02.dto;
-
+//TODO:
 public class LoginData {
     private String login;
     private String senha;

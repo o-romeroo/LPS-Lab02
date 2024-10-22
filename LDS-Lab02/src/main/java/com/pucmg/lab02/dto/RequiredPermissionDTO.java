@@ -1,5 +1,6 @@
 package com.pucmg.lab02.dto;
 
+//TODO:
 public class RequiredPermissionDTO {
     private Long id;
     private String role;
@@ -15,11 +16,11 @@ public class RequiredPermissionDTO {
 
     public void setId(Long id) {
         this.id = id;
-    } 
+    }
 
     public String getRole() {
         return role;
-    }  
+    }
 
     public void setRole(String role) {
         this.role = role;
